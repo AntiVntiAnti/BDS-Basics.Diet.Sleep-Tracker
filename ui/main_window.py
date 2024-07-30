@@ -134,8 +134,8 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         look like a beached whale with three oddly specific shaped eyes. Or something. ITs better.
         """
         self.basics_stack.setCurrentWidget(self.input)
-        self.resize(277, 300)
-        self.setMaximumSize(277, 300)
+        self.resize(300, 270)
+        self.setFixedSize(300, 270)
     
     def switch_to_page2(self):
         """
@@ -149,7 +149,7 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         """
         self.basics_stack.setCurrentWidget(self.sleepPage)
         self.setMaximumSize(540, 540)
-        self.resize(540, 540)
+        self.setFixedSize(540, 540)
     
     def switch_to_page3(self):
         """
@@ -163,7 +163,7 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         """
         self.basics_stack.setCurrentWidget(self.dietPage)
         self.setMaximumSize(800, 540)
-        self.resize(800, 540)
+        self.setFixedSize(800, 540)
     
     def switch_to_page4(self):
         """
@@ -177,7 +177,7 @@ class MainWindow(FramelessWindow, QtWidgets.QMainWindow, Ui_MainWindow):
         """
         self.basics_stack.setCurrentWidget(self.basicsPage)
         self.setMaximumSize(540, 540)
-        self.resize(540, 540)
+        self.setFixedSize(540, 540)
         
     def auto_datetime(self) -> None:
         try:

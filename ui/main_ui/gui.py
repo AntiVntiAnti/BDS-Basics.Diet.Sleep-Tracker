@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(279, 325)
+        MainWindow.resize(279, 297)
         MainWindow.setStyleSheet("QWidget {\n"
 "    font: 11pt \"Poppins\";\n"
 "    background:#121212;\n"
@@ -110,21 +110,23 @@ class Ui_MainWindow(object):
 "    background:transparent;\n"
 "}\n"
 "QSlider::groove:horizontal {\n"
-"    border-radius: 6px;\n"
-"    height: 13px;\n"
+"    border:1px inset rgb(22, 22, 44);\n"
+"    border-radius: 9px;\n"
+"    height: 16px;\n"
 "    margin: 0px;\n"
 "    background:rgb(22, 22, 22);\n"
 "    }\n"
 "\n"
 "QSlider::groove:horizontal:hover {\n"
 "    background: rgb(38, 38, 38);\n"
+"    border:1px inset rgb(29, 32, 54);\n"
 "}\n"
 "QSlider::handle:horizontal {\n"
 "    background: rgb(255, 255, 255);\n"
-"    height: 13px;\n"
-"    width: 13px;\n"
+"    height: 16px;\n"
+"    width: 16px;\n"
 "    margin: 0px;\n"
-"    border-radius:6px;\n"
+"    border-radius:8px;\n"
 "}\n"
 "QSlider::sub-page:horizontal {\n"
 "    background:transparent;\n"
@@ -432,7 +434,7 @@ class Ui_MainWindow(object):
         self.frame2.setSizePolicy(sizePolicy)
         self.frame2.setObjectName("frame2")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.frame2)
-        self.gridLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_9.setContentsMargins(0, 0, 0, 4)
         self.gridLayout_9.setHorizontalSpacing(6)
         self.gridLayout_9.setVerticalSpacing(3)
         self.gridLayout_9.setObjectName("gridLayout_9")
@@ -466,6 +468,7 @@ class Ui_MainWindow(object):
         self.woke_like_lbl.setObjectName("woke_like_lbl")
         self.gridLayout_9.addWidget(self.woke_like_lbl, 4, 0, 1, 1)
         self.sleep_quality_slider = QtWidgets.QSlider(parent=self.frame2)
+        self.sleep_quality_slider.setMinimumSize(QtCore.QSize(0, 17))
         self.sleep_quality_slider.setStyleSheet("\n"
 "    /* ///////////////////////////////////////////////////////////////\n"
 "    QSlider Colors\n"
@@ -474,7 +477,7 @@ class Ui_MainWindow(object):
 "    QSlider::handle:horizontal {background:rgb(132,127,239);}\n"
 "    QSlider::handle:horizontal:hover {background:rgb(162,157,255);}\n"
 "    QSlider::handle:horizontal:pressed {background:rgb(112,107,219);}\n"
-"    QSlider::groove:horizontal:hover {background:rgba(132,127,239,0.25);}\n"
+"    QSlider::groove:horizontal:hover {background:rgba(132,127,239,0.35);}\n"
 "    QSlider::groove:horizontal {background:rgba(132,127,239,0.15);}\n"
 "\n"
 "    ")
@@ -483,6 +486,7 @@ class Ui_MainWindow(object):
         self.sleep_quality_slider.setObjectName("sleep_quality_slider")
         self.gridLayout_9.addWidget(self.sleep_quality_slider, 3, 2, 1, 1)
         self.woke_up_like_slider = QtWidgets.QSlider(parent=self.frame2)
+        self.woke_up_like_slider.setMinimumSize(QtCore.QSize(0, 17))
         self.woke_up_like_slider.setStyleSheet("\n"
 "    /* ///////////////////////////////////////////////////////////////\n"
 "    QSlider Colors\n"
@@ -491,7 +495,7 @@ class Ui_MainWindow(object):
 "    QSlider::handle:horizontal {background:rgb(132,127,239);}\n"
 "    QSlider::handle:horizontal:hover {background:rgb(162,157,255);}\n"
 "    QSlider::handle:horizontal:pressed {background:rgb(112,107,219);}\n"
-"    QSlider::groove:horizontal:hover {background:rgba(132,127,239,0.25);}\n"
+"    QSlider::groove:horizontal:hover {background:rgba(132,127,239,0.35);}\n"
 "    QSlider::groove:horizontal {background:rgba(132,127,239,0.15);}\n"
 "\n"
 "    ")
@@ -624,28 +628,13 @@ class Ui_MainWindow(object):
         self.diet_input_frame = QtWidgets.QFrame(parent=self.frame1)
         self.diet_input_frame.setObjectName("diet_input_frame")
         self.gridLayout_12 = QtWidgets.QGridLayout(self.diet_input_frame)
+        self.gridLayout_12.setContentsMargins(4, 4, 4, 4)
+        self.gridLayout_12.setHorizontalSpacing(0)
         self.gridLayout_12.setObjectName("gridLayout_12")
-        self.calories = QtWidgets.QSpinBox(parent=self.diet_input_frame)
-        self.calories.setMaximumSize(QtCore.QSize(45, 16777215))
-        self.calories.setStyleSheet("\n"
-"/* ///////////////////////////////////////////////////////////////\n"
-"QTimeEdit\n"
-"/////////////////////////////////////////////////////////////// */\n"
-"QSpinBox {color:rgb(132,127,239);}\n"
-"QSpinBox:hover {color: rgb(152,147,255);}\n"
-"QSpinBox:focus {color: rgb(172,167,255);}\n"
-"")
-        self.calories.setFrame(False)
-        self.calories.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.calories.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
-        self.calories.setMaximum(2000)
-        self.calories.setSingleStep(10)
-        self.calories.setObjectName("calories")
-        self.gridLayout_12.addWidget(self.calories, 1, 1, 1, 1)
         self.frame_2 = QtWidgets.QFrame(parent=self.diet_input_frame)
         self.frame_2.setStyleSheet("QFrame {background: transparent;}\n"
 "QPushButton {\n"
-"color: #fff;\n"
+"color:rgb(90,98,200);\n"
 "font-weight:bold;\n"
 "font-size:8pt;\n"
 "border-radius: 17px;\n"
@@ -658,7 +647,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"color: #fff;\n"
+"color: rgb(62, 59, 120);\n"
 "margin-top:1px;\n"
 "margin-left:1px;\n"
 "border-color:rgb(120,128,230);\n"
@@ -666,7 +655,8 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"color: #fff;\n"
+"color: transparent;\n"
+"image: url(:/newPrefix/drankydrankChunks.png);\n"
 "margin: 0px;\n"
 "padding:0px;\n"
 "border-color:rgb(90,98,200);\n"
@@ -676,8 +666,8 @@ class Ui_MainWindow(object):
         self.frame_2.setObjectName("frame_2")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.frame_2)
         self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_10.setHorizontalSpacing(6)
-        self.gridLayout_10.setVerticalSpacing(4)
+        self.gridLayout_10.setHorizontalSpacing(9)
+        self.gridLayout_10.setVerticalSpacing(0)
         self.gridLayout_10.setObjectName("gridLayout_10")
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.gridLayout_10.addItem(spacerItem, 0, 8, 1, 1)
@@ -702,7 +692,24 @@ class Ui_MainWindow(object):
         self.gridLayout_10.addItem(spacerItem3, 0, 2, 1, 1)
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.gridLayout_10.addItem(spacerItem4, 0, 6, 1, 1)
-        self.gridLayout_12.addWidget(self.frame_2, 3, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.frame_2, 2, 0, 1, 2)
+        self.calories = QtWidgets.QSpinBox(parent=self.diet_input_frame)
+        self.calories.setMaximumSize(QtCore.QSize(45, 16777215))
+        self.calories.setStyleSheet("\n"
+"/* ///////////////////////////////////////////////////////////////\n"
+"QTimeEdit\n"
+"/////////////////////////////////////////////////////////////// */\n"
+"QSpinBox {color:rgb(132,127,239);}\n"
+"QSpinBox:hover {color: rgb(152,147,255);}\n"
+"QSpinBox:focus {color: rgb(172,167,255);}\n"
+"")
+        self.calories.setFrame(False)
+        self.calories.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.calories.setButtonSymbols(QtWidgets.QAbstractSpinBox.ButtonSymbols.NoButtons)
+        self.calories.setMaximum(2000)
+        self.calories.setSingleStep(10)
+        self.calories.setObjectName("calories")
+        self.gridLayout_12.addWidget(self.calories, 0, 1, 1, 1)
         self.food_eaten = QtWidgets.QLineEdit(parent=self.diet_input_frame)
         self.food_eaten.setMinimumSize(QtCore.QSize(155, 0))
         self.food_eaten.setStyleSheet("QLineEdit {\n"
@@ -722,28 +729,18 @@ class Ui_MainWindow(object):
         self.food_eaten.setFrame(False)
         self.food_eaten.setClearButtonEnabled(True)
         self.food_eaten.setObjectName("food_eaten")
-        self.gridLayout_12.addWidget(self.food_eaten, 1, 0, 1, 1)
-        self.line = QtWidgets.QFrame(parent=self.diet_input_frame)
-        self.line.setFrameShape(QtWidgets.QFrame.Shape.HLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
-        self.line.setObjectName("line")
-        self.gridLayout_12.addWidget(self.line, 4, 0, 1, 2)
-        self.line_2 = QtWidgets.QFrame(parent=self.diet_input_frame)
-        self.line_2.setFrameShape(QtWidgets.QFrame.Shape.HLine)
-        self.line_2.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
-        self.line_2.setObjectName("line_2")
-        self.gridLayout_12.addWidget(self.line_2, 0, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.food_eaten, 0, 0, 1, 1)
         self.verticalLayout.addWidget(self.diet_input_frame)
         self.commit_container = QtWidgets.QFrame(parent=self.frame1)
         self.commit_container.setStyleSheet("QPushButton {\n"
 "color: rgb(33,143,109);\n"
 "font-size:9pt;\n"
 "padding:4px;\n"
-"border-radius: 20px;\n"
-"min-width: 20px;\n"
-"max-width: 20px;\n"
-"min-height: 20px;\n"
-"max-height: 20px;\n"
+"border-radius: 30px;\n"
+"min-width: 40px;\n"
+"max-width: 40px;\n"
+"min-height: 40px;\n"
+"max-height: 40px;\n"
 "border:6px solid rgb(33,143,109);\n"
 "}\n"
 "QPushButton:hover {\n"
@@ -772,12 +769,12 @@ class Ui_MainWindow(object):
 "\n"
 "}\n"
 "\n"
-"QPushButton:hover {\n"
+"QPushButton:pressed {\n"
 "image: url(:/newPrefix/showerHover.png);\n"
 "\n"
 "}\n"
 "\n"
-"QPushButton:pressed {\n"
+"QPushButton:hover {\n"
 "\n"
 "image:url(:/newPrefix/Mac App icon 30.png);\n"
 "\n"
@@ -797,12 +794,12 @@ class Ui_MainWindow(object):
 "\n"
 "}\n"
 "\n"
-"QPushButton:hover {\n"
+"QPushButton:pressed {\n"
 "image:url(:/newPrefix/teethHover.png);\n"
 "\n"
 "}\n"
 "\n"
-"QPushButton:pressed {\n"
+"QPushButton:hover {\n"
 "\n"
 "image:url(:/newPrefix/teethPressed.png);\n"
 "\n"
@@ -822,12 +819,12 @@ class Ui_MainWindow(object):
 "\n"
 "}\n"
 "\n"
-"QPushButton:hover {\n"
+"QPushButton:pressed {\n"
 "image: url(:/newPrefix/yogaHover.png);\n"
 "\n"
 "}\n"
 "\n"
-"QPushButton:pressed {\n"
+"QPushButton:hover {\n"
 "\n"
 "image:url(:/newPrefix/basics2Wh.png);\n"
 "\n"
@@ -1038,7 +1035,8 @@ class Ui_MainWindow(object):
         self.dietPage = QtWidgets.QWidget()
         self.dietPage.setObjectName("dietPage")
         self.gridLayout_19 = QtWidgets.QGridLayout(self.dietPage)
-        self.gridLayout_19.setContentsMargins(6, 6, 6, 6)
+        self.gridLayout_19.setContentsMargins(9, 9, 9, 9)
+        self.gridLayout_19.setSpacing(0)
         self.gridLayout_19.setObjectName("gridLayout_19")
         self.tabWidget_2 = QtWidgets.QTabWidget(parent=self.dietPage)
         self.tabWidget_2.setStyleSheet("QTabWidget {\n"
@@ -1146,7 +1144,7 @@ class Ui_MainWindow(object):
         self.basicsPage = QtWidgets.QWidget()
         self.basicsPage.setObjectName("basicsPage")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.basicsPage)
-        self.gridLayout_5.setContentsMargins(8, 8, 8, 8)
+        self.gridLayout_5.setContentsMargins(9, 9, 9, 9)
         self.gridLayout_5.setSpacing(0)
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.shower_tab = QtWidgets.QTabWidget(parent=self.basicsPage)
@@ -1284,6 +1282,8 @@ class Ui_MainWindow(object):
         self.datesandtimes = QtWidgets.QWidget()
         self.datesandtimes.setObjectName("datesandtimes")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.datesandtimes)
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_4.setSpacing(0)
         self.gridLayout_4.setObjectName("gridLayout_4")
         self.basics_date = QtWidgets.QDateEdit(parent=self.datesandtimes)
         self.basics_date.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2023, 9, 14), QtCore.QTime(0, 0, 0)))
@@ -1317,24 +1317,7 @@ class Ui_MainWindow(object):
         self.diet_date.setObjectName("diet_date")
         self.gridLayout_4.addWidget(self.diet_date, 3, 0, 1, 1)
         self.basics_stack.addWidget(self.datesandtimes)
-        self.gridLayout.addWidget(self.basics_stack, 1, 0, 1, 2)
-        self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButton.setStyleSheet("QPushButton {\n"
-"max-width:10px;\n"
-"min-width:10px;\n"
-"max-height:10px;\n"
-"min-height:10px;\n"
-"image:url(:/newPrefix/BECK EXAM/asdfasfdsafwe.png);\n"
-"}\n"
-"QPushButton:hover {\n"
-"image:url(:/newPrefix/BECK EXAM/cxccxx.png);\n"
-"}")
-        self.pushButton.setText("")
-        self.pushButton.setFlat(True)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 0, 0, 1, 1)
-        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.gridLayout.addItem(spacerItem10, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.basics_stack, 0, 0, 1, 2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 279, 18))
@@ -1377,7 +1360,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.basics_stack.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_2.setCurrentIndex(1)
+        self.tabWidget_2.setCurrentIndex(0)
         self.shower_tab.setCurrentIndex(0)
         self.shower_c.clicked.connect(self.shower_check.toggle) # type: ignore
         self.teeth_commit.clicked.connect(self.tooth_check.toggle) # type: ignore
@@ -1386,7 +1369,6 @@ class Ui_MainWindow(object):
         self.sleep_quality.valueChanged['int'].connect(self.sleep_quality_slider.setValue) # type: ignore
         self.woke_up_like.valueChanged['int'].connect(self.woke_up_like_slider.setValue) # type: ignore
         self.woke_up_like_slider.valueChanged['int'].connect(self.woke_up_like.setValue) # type: ignore
-        self.pushButton.clicked.connect(MainWindow.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.time_asleep, self.time_awake)
         MainWindow.setTabOrder(self.time_awake, self.sleep_quality)
@@ -1437,11 +1419,11 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "time.asleep"))
         self.label_2.setText(_translate("MainWindow", "time.awake"))
         self.label_3.setText(_translate("MainWindow", "total.hrs.slept"))
-        self.calories.setSuffix(_translate("MainWindow", " cal."))
         self.twenty_four_ounce_cup.setText(_translate("MainWindow", "24oz"))
         self.sixteen_ounce_cup.setText(_translate("MainWindow", "16oz"))
         self.eight_ounce_cup.setText(_translate("MainWindow", "8oz"))
         self.thirty_two_ounce_cup.setText(_translate("MainWindow", "32oz"))
+        self.calories.setSuffix(_translate("MainWindow", " cal."))
         self.food_eaten.setToolTip(_translate("MainWindow", "Input food eaten or shake drank!"))
         self.food_eaten.setPlaceholderText(_translate("MainWindow", "What did I eat..."))
         self.tabWidget.setTabToolTip(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Awake and Time Asleep"))
