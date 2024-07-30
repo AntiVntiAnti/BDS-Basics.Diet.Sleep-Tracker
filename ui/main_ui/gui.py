@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'BDSguiJuly28.ui'
+# Form implementation generated from reading ui file 'BDSguiJuly29.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.0
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(279, 297)
+        MainWindow.resize(279, 305)
         MainWindow.setStyleSheet("QWidget {\n"
 "    font: 11pt \"Poppins\";\n"
 "    background:#121212;\n"
@@ -758,7 +758,7 @@ class Ui_MainWindow(object):
 "}")
         self.commit_container.setObjectName("commit_container")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.commit_container)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setContentsMargins(0, 8, 0, 0)
         self.horizontalLayout.setSpacing(12)
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
