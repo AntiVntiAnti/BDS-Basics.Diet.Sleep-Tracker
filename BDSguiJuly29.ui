@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>279</width>
-    <height>297</height>
+    <height>305</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1092,7 +1092,7 @@ border:6px solid rgb(13, 123, 83);
                   <number>0</number>
                  </property>
                  <property name="topMargin">
-                  <number>0</number>
+                  <number>8</number>
                  </property>
                  <property name="rightMargin">
                   <number>0</number>
